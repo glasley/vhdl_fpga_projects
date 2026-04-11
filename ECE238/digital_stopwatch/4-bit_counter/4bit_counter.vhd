@@ -48,10 +48,10 @@ begin
 
     FD: Frequency_Divider port map (Clock_System => Clock_system, Clock_1Hz => Clk_1Hz);
 
-    ff0: D_flip_flop_reset port map (D => notTemp(0), CLK => Clk_1Hz, CLR => Reset, Q => temp(0));
-    ff1: D_flip_flop_reset port map (D => notTemp(1), CLK => temp(0), CLR => Reset, Q => temp(1));
-    ff2: D_flip_flop_reset port map (D => notTemp(2), CLK => temp(1), CLR => Reset, Q => temp(2));
-    ff3: D_flip_flop_reset port map (D => notTemp(3), CLK => temp(2), CLR => Reset, Q => temp(3));
+    ff0: D_flip_flop_reset port map (CLK => Clk_1Hz, D => notTemp(0), Q => temp(0),CLR => Reset);
+    ff1: D_flip_flop_reset port map (CLK => temp(0), D => notTemp(1), Q => temp(1),CLR => Reset);
+    ff2: D_flip_flop_reset port map (CLK => temp(1), D => notTemp(2), Q => temp(2), CLR => Reset);
+    ff3: D_flip_flop_reset port map (CLK => temp(2),D => notTemp(3), Q => temp(3), CLR => Reset);
 
     Count <= temp;
 
