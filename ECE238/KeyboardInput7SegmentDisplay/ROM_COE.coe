@@ -1,0 +1,22 @@
+; This COE file is for use with a ROM
+; memory of depth=16, width=8.
+; Values specified in hexadecimal format.
+
+memory_initialization_radix=16;
+memory_initialization_vector=
+03,
+9F,
+25,
+0D,
+99,
+49,
+41,
+0B,
+01,
+09,
+11,
+C1,
+63,
+85,
+61,
+71;
