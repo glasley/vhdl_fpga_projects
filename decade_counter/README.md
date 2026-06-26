@@ -1,10 +1,14 @@
 # Decade Counter
 
-A ten-state (0–9) counter driving a single-digit 7-segment display. (Originally "TenDigitDisplayCounter.")
+A up and down (0-9) finite-state counter that drives a single 7-segment display. (Originally "TenDigitDisplayCounter.")
+
+# Status -  incomplete files
+
+This project is missing the tenstatedisplay.vhd and work.drequency_divider and need to be uploaded from UNM machine.
 
 ## What it does
 
-Counts repeatedly through the digits 0 through 9 and shows the current value on a 7-segment display, wrapping back to 0 after 9.
+Counts repeatedly through the digits 0 through 9 and shows the current value on a 7-segment display, wrapping back to 0 after 9.  An asynchronous reset will return the counter to 0.
 
 ## How it works
 
