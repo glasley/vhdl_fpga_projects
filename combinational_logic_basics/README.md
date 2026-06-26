@@ -12,7 +12,7 @@ Each block is written as its own entity with a matching testbench and constraint
 
 - **`gates.vhd`** - basic logic gate implementations.
 - **`multiplexer.vhd`** - a multiplexer selecting between inputs.
-- **`DisplayDecoder.vhd`** - decodes a value to 7-segment display segments.
+- **`DisplayDecoder.vhd`** - a 1-bit decoder that lights one of two fixed 7-segment patterns based on the selected bit.
 - **`Lab3_Top/Lab3_top.vhd`** - top module that integrates the blocks and connects them to board I/O.
 
 The structure reflects the standard digital-design workflow: build a component, simulate it against a testbench, constrain it to physical pins, then reuse it inside a larger design.
@@ -23,7 +23,7 @@ The structure reflects the standard digital-design workflow: build a component, 
 | -------------------------------------------- | ------------------------- |
 | `gates.vhd` (+ `_tb`, `_constr`)             | Basic logic gates         |
 | `multiplexer.vhd` (+ `_tb`, `_constr`)       | Multiplexer               |
-| `DisplayDecoder.vhd` (+ `_tb`, `_constr`)    | 7-segment display decoder |
+| `DisplayDecoder.vhd` (+ `_tb`, `_constr`)    | 1-bit two-pattern 7segment decoder |
 | `Lab3_Top/Lab3_top.vhd` (+ `_tb`, `_constr`) | Top-level integration     |
 
 ## Build & target
