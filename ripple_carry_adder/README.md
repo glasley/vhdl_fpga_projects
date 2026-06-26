@@ -2,6 +2,10 @@
 
 A structural ripple-carry adder built from full-adder logic, with testbench and pin constraints.
 
+# Status - Incomplete
+
+Currently missing design sources for half and full adders used, need to be added from UNM machine.
+
 ## What it does
 
 Adds two multi-bit inputs and produces their sum and carry-out, with each bit's carry rippling into the next stage.
