@@ -37,7 +37,7 @@ begin
     begin
         if Clock_System'event and Clock_System = '1' then
         count <= count + 1;
-            if count = 8 then 
+            if count = 50000000 then 
                 Clock_1Hz <= not sClock_1Hz;
                 sClock_1Hz <= not sClock_1Hz;
                 count <= 1;
