@@ -10,8 +10,8 @@ Implements and demonstrates the core combinational components of basic gates, a 
 
 Each block is written as its own entity with a matching testbench and constraint file, then composed:
 
-- **`gates.vhd`** - basic logic gate implementations.
-- **`multiplexer.vhd`** - a multiplexer selecting between inputs.
+- **`gates.vhd`** - computes 8 gate functions from inputs A and B.
+- **`multiplexer.vhd`** - an 8-to-1 multiplexer where a 3-bit selector picks one of the 8 gate outputs.
 - **`DisplayDecoder.vhd`** - a 1-bit decoder that lights one of two fixed 7-segment patterns based on the selected bit.
 - **`Lab3_Top/Lab3_top.vhd`** - top module that integrates the blocks and connects them to board I/O.
 
