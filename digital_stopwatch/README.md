@@ -4,14 +4,14 @@ A real-time counter displayed on a 7-segment display, built bottom-up from a sin
 
 ## What it does
 
-Once running, the design counts in real time and shows the current count on the board's 7-segment display, driven by a 1 Hz tick derived from the board clock. A reset returns the count to zero.
+Once running, the design advances a 4-bit count shown as a single hex digit (0-F) on the 7-segment display.  This process is driven by a frequency divided clock tick, wrapping back to 0 after F.  A reset will interrupt and reset the count to zero.
 
 ## How it works
 
 The project was an exercise in hierarchical, bottom-up structural design where each level is built and verified before being used in the next:
 
 1. **D flip-flop (`D_flip_flop_reset.vhd`)** - a reset-capable flip-flop, the basic storage primitive.
-2. **4-bit counter (`4bit_counter.vhd`)** - built from the flip-flops, and containing the frequency divider that produces the 1 Hz counting tick.
+2. **4-bit counter (`4bit_counter.vhd`)** - built from the flip-flops, and containing the frequency divider that produces its counting tick.
 3. **Frequency divider (`frequency_divider.vhd`)** - divides the high-frequency board clock down to the 1 Hz rate the counter advances on.
 4. **Display (`display_digit.vhd`)** - decodes the count value to the 7-segment display.
 5. **Top (`digital_stopwatch_top.vhd`)** - a structural module that instantiates the counter and the display and wires them together.
